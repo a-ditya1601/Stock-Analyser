@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "equity-research-reporter"
+version = "0.1.0"
+description = "Automated equity analysis and PDF reporting tool."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "yfinance>=0.2.61",
+    "pandas>=2.2.0",
+    "pandas-ta>=0.3.14b0",
+    "mplfinance>=0.12.10b0",
+    "fpdf2>=2.8.0",
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.30.0",
+    "pydantic>=2.8.0",
+    "python-multipart>=0.0.9",
+    "openai>=1.86.0",
+    "python-dotenv>=1.0.1",
+    "smartapi-python>=1.5.5",
+    "pyotp>=2.9.0",
+    "logzero>=1.7.0",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
